@@ -61,7 +61,7 @@ module.exports = {
                 use: [ 'babel-loader', ],
                 exclude: /node_modules/
             },            
-            {   
+            {
                 //without sass
                     //test: /\.css$/,
                 //with sass
@@ -76,6 +76,14 @@ module.exports = {
                     to style itself. for production you will use << ExtractTextWebpackPlugin plugin >> */
             },
         ],
+    },
+
+    resolve: {
+        modules: [
+            "node_modules",
+            resolve(__dirname, "src")
+        ],
+        extensions: [".js", ".json", ".jsx", ".css"]
     },
 
     plugins: [
