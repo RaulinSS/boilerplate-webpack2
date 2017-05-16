@@ -7,7 +7,6 @@ const PATHS = require('./paths').PATHS;
 
 const app = express();
 
-console.log(isProduction,"isProduction");
 if (isProduction) {
   app.use(express.static(PATHS.dist));
   app.get('*', (req, res) => {
