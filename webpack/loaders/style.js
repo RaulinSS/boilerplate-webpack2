@@ -18,16 +18,19 @@ const loaders = {
             modules: true,
             localIdentName: '[local]__[hash:base64:3]',
             minimize: isProduction,
+            //the query paramenter <<importLoaders>> allows to configure how many loaders
+            //before css-loader should be applied to @import ed resources.
+            importLoaders: 2
         },
     },    
-    sassLoader: {
-        loader: 'sass-loader'
-    },
     postcssLoader: {
         loader: 'postcss-loader',
         options: {
             plugins: [autoprefixer],
         },
+    },    
+    sassLoader: {
+        loader: 'sass-loader'
     }
 };
 
