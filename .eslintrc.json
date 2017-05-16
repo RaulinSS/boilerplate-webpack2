@@ -1,0 +1,24 @@
+{
+	"extends": "pagseguro",
+	"rules": {
+		"react/jsx-uses-vars": 1,
+		"react/react-in-jsx-scope": 1, 
+		
+		"no-extra-parens": ["error", "all", { "ignoreJSX": "all" }],
+		"func-style": ["error", "expression", { "allowArrowFunctions": true }],
+		"object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
+			"object-curly-newline": [0, {
+			"ObjectExpression": "never",
+			"ObjectPattern": { "multiline": true }
+		}]
+	},
+	"plugins": ["react"],
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	}
+}
