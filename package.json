@@ -4,10 +4,12 @@
   "description": "learning-webpack",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.15.2",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-hot-loader": "^3.0.0-beta.7"
+    "react-hot-loader": "^3.0.0-beta.7",
+    "webpack-dev-middleware": "^1.10.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -22,10 +24,12 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
-    "dev": "NODE_ENV=development && node ./node_modules/webpack/bin/webpack.js --config ./webpack/config-dev.js --progress",
+    "start": "node ./webpack/server.js",
+    "build-dev": "NODE_ENV=development && node ./node_modules/webpack/bin/webpack.js --config ./webpack/config-dev.js --progress",
     "prod": "webpack -p"
   },
   "author": "raul-soto",
