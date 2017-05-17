@@ -1,0 +1,1 @@
+pasta que contem os componentes sem estado (stateless components)

@@ -1,0 +1,1 @@
+pasta que contem os componentes com estado (statefull components)

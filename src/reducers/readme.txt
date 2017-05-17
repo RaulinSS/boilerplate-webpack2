@@ -1,0 +1,1 @@
+pasta que contem os reducers utilizados na app
