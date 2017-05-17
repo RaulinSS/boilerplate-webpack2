@@ -6,7 +6,6 @@ const App = (props) => {
 	return (
 		<div className={styles.app}>
 			<h2>Hello, {props.name}</h2>
-			<h2>Hello2, {props.name}</h2>
 		</div>
 	);
 };
