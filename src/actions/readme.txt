@@ -1,0 +1,1 @@
+pasta que contem os action creators da aplicação.
