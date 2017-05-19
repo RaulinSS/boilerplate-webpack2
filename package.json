@@ -4,12 +4,16 @@
   "description": "learning-webpack",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.16.1",
     "express": "^4.15.2",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-hot-loader": "^3.0.0-beta.7"
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

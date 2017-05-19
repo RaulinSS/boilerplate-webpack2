@@ -1,0 +1,1 @@
+pasta que contém a criacao da store, incluindo os middlewares que seram utilizados.
