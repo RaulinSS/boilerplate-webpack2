@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Table = ({collection}) => {
+const Table = ({collection}) => {	
 	return (
 			<ul>
-						collection.map(user => (
-								<li>{user.name} --- {user.email}</li>
-						)
-				</ul>
+				{collection.map(user => {						
+						return <li style={{'listStyle': 'none','color':'blue'}} key={user.id}>{user.email} ---- {user.name} ---- {user.website}</li>
+					})
+				}
+			</ul>
 	);
 };
 

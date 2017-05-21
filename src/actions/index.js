@@ -24,7 +24,7 @@ export const fetchClients = function(filter) {
 		dispatch(requestClients(filter));
 
 		return axios.get(apiFAKE)
-			.then(response => response.json())
-			.then(json => dispatch(receiveClients(json)));
+			.then(response => response.data)
+			.then(data => dispatch(receiveClients(data)));			
 	};
 };

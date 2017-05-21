@@ -11,12 +11,12 @@ const clientsByFilter = function(state = {
 				isFetching: true
 			});
 		case RECEIVE_CLIENTS:
-			return Object.assing({}, state, {
-				isFetching: false,
+			return Object.assign({}, state, {
+				isFetching: false,				
 				data: action.payload
 			});
 		default:
-			return state;
+			return state; 
 	}
 };
 

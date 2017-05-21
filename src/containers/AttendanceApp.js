@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import Table from '../components/Table';
 import PropTypes from 'prop-types';
 //react-redux
 import { connect } from 'react-redux';
 //actions
 import { fetchClients } from '../actions/index';
+//components
+import Table from '../components/Table';
 
 class AttendanceApp extends Component {
+	constructor(props) {
+		super(props);
+	}
 
 	componentDidMount() {
-		debugger;
+		const { dispatch } = this.props;
 		dispatch(fetchClients(''));
 	}
 
-	render() {
-		debugger;
+	render() {		
+		const { isFetching, clientsByFilter } = this.props;
 		return (
 				<div>
 						<p>Clientes</p>
@@ -34,10 +38,8 @@ AttendanceApp.propTypes = {
 };
 
 const mapStateToProps = function(state) {
-	debugger;
 	const isFetching = state.clientsByFilter ? state.clientsByFilter.isFetching : true;
 	const clientsByFilter = state.clientsByFilter.data;
-	console.log('isFetching', isFetching);
 	return {
 		isFetching,
 		clientsByFilter

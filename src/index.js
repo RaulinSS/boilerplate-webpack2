@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 
-const render = (Component) => {
+const render = Component => {
 	ReactDOM.render(
 		<AppContainer>
-				<Component name="pagseguro"/>
+				<Component/>
 		</AppContainer>,
 		document.getElementById('root')
 	);
@@ -25,7 +25,7 @@ if (module.hot) {
   //The render method will even fire when App.css is changed because it is included
   //in App.js.
 
-	module.hot.accept(Root, () => {
+	module.hot.accept('./containers/Root', () => {
 		render(Root);
 	});
 }
