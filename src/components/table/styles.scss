@@ -3,13 +3,19 @@
   margin: 10px 0;
   width: 100%;  
 
-  & tr.clickable:hover {
-   background-color: yellow;
-   cursor: pointer;
+  & tr {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;    
+  
   }
 
+  & tr.clickable:hover {
+    background-color: #2ECC40;
+    cursor: pointer;
+  }
+   
   & td, th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 8px;    
   }
 }

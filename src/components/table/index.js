@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import styles from './styles.scss';
 
-
 class Table extends Component {
-	constructor(props) {
-		super(props);
-	}
 
 	_renderTableHeaders() {
 		if (this.props.schema && this.props.schema.length > 0) {
@@ -32,10 +29,15 @@ class Table extends Component {
 	}
 
 	_renderTableRows(cell, index) {
+		const cx = classNames.bind(styles);
+		const rowStyle = cx({
+			clickable: this.props.clickable
+		});
+
 		const itemsRow = this._renderItemsRow(cell);
 
 		return (
-			<tr key={index}>
+			<tr key={index} className={rowStyle} onClick = {this.props.clickable && this._handleTableClick.bind(this, cell)} >
 					{itemsRow}
 			</tr>
 		);
@@ -50,6 +52,10 @@ class Table extends Component {
 
 		console.log('precisa cadastrar uma coleção com os dados que renderizaram no body da tabela');
 		return null;
+	}
+
+	_handleTableClick(infoRow, event) {
+		this.props.onClick(infoRow);
 	}
 
 	render() {
@@ -77,6 +83,11 @@ Table.propTypes = {
 	collection: PropTypes.array.isRequired,
 	clickable: PropTypes.bool,
 	onClick: PropTypes.func
+};
+
+Table.defaultProps = {
+	clickable: false,
+	onClick: () => {}
 };
 
 export default Table;

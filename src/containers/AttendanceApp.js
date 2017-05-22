@@ -14,8 +14,10 @@ class AttendanceApp extends Component {
 	}
 
 	componentDidMount() {
-		//debugger;
-		//this.props.dispatch(fetchClients(''));
+	}
+
+	_handleOnClick(infoRow) {
+		console.log('infoRow', infoRow);
 	}
 
 	render() {
@@ -51,7 +53,7 @@ class AttendanceApp extends Component {
 			id: '0003',
 			account: 'icone',
 			status: 'verificada',
-			name: 'superman avengers',
+			name: 'thor avengers',
 			email: 'superman_3000@hotmail.com',
 			email_attendance: '',
 			website: '',
@@ -66,6 +68,7 @@ class AttendanceApp extends Component {
 						<Table schema={SchemaClients}
 						collection={arrayClients}
 						clickable={true}
+						onClick = {this._handleOnClick.bind(this)}
 						/>
 				</div>
 		);
