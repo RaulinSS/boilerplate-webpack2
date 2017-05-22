@@ -6,29 +6,28 @@ const scriptLoader = require('./loaders/script');
 const styleLoader = require('./loaders/style');
 
 module.exports = {
-    devtool: 'source-map',
+	devtool: 'source-map',
 
-    output: {
-        path: PATHS.dist,
-        publicPath: PUBLIC_PATH,
-        filename: '[name].js',
-    },
+	output: {
+		path: PATHS.dist,
+		publicPath: PUBLIC_PATH,
+		filename: '[name].js'
+	},
 
-    resolve: {
-        alias: {
-            src: PATHS.src,
-        },
-        modules: [
-        //`${PATHS.src}/ui`,
-            `${PATHS.root}/node_modules`,
-        ],
-        extensions: [".js", ".json", ".jsx", ".css"]
-    },
-
-    module: { 
-       rules: [
-           scriptLoader,
-           styleLoader
-       ] 
-    }
+	resolve: {
+		alias: {
+			src: PATHS.src
+		},
+		modules: [
+		//`${PATHS.src}/ui`,
+			`${PATHS.root}/node_modules`
+		],
+		extensions: ['.js', '.json', '.jsx', '.css']
+	},
+	module: {
+		rules: [
+			scriptLoader,
+			styleLoader
+		]
+	}
 };

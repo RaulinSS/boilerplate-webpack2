@@ -25,6 +25,6 @@ export const fetchClients = function(filter) {
 
 		return axios.get(apiFAKE)
 			.then(response => response.data)
-			.then(data => dispatch(receiveClients(data)));			
+			.then(data => dispatch(receiveClients(data)));
 	};
 };

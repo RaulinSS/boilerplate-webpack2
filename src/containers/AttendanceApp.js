@@ -17,7 +17,7 @@ class AttendanceApp extends Component {
 		dispatch(fetchClients(''));
 	}
 
-	render() {		
+	render() {
 		const { isFetching, clientsByFilter } = this.props;
 		return (
 				<div>
