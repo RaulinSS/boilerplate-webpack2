@@ -1,0 +1,15 @@
+.Table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  width: 100%;  
+
+  & tr.clickable:hover {
+   background-color: yellow;
+   cursor: pointer;
+  }
+
+  & td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+}

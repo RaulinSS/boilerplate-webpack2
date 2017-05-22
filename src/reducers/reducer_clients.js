@@ -4,7 +4,6 @@ const clientsByFilter = function(state = {
 	isFetching: false,
 	data: []
 }, action) {
-	debugger;
 	switch (action.type)	{
 		case REQUEST_CLIENTS:
 			return Object.assign({}, state, {
@@ -12,11 +11,11 @@ const clientsByFilter = function(state = {
 			});
 		case RECEIVE_CLIENTS:
 			return Object.assign({}, state, {
-				isFetching: false,				
+				isFetching: false,
 				data: action.payload
 			});
 		default:
-			return state; 
+			return state;
 	}
 };
 
