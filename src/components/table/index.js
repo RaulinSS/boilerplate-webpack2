@@ -16,10 +16,12 @@ class Table extends Component {
 		return null;
 	}
 
-	_renderItemsRow(object) {
-		if (Object.keys(object) && Object.keys(object).length > 0) {
+	_renderItemsRow(object = {}) {
+		const objectKeys = Object.keys(object);
+
+		if (objectKeys && objectKeys.length > 0) {
 			return (
-				Object.keys(object).map((key, index) => (
+				objectKeys.map((key, index) => (
 						<td key={index}>{object[key]}</td>
 				))
 			);
